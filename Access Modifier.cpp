@@ -1,47 +1,30 @@
 #include <iostream>
 using namespace std;
 
-//Parent class
-
 class Human{
-    string Religion, color;
-    // protected: // we can access only within the class 
-    public: // accesss anywhere
-    string name;
-    int age, weight;
-    
-};
-
-// child class
-class Student: public Human
-{
-    private:
-    int roll_no, fees;
     
     public:
-    Student(string name, int age, int weight, int roll_no, int fees){
-        this->name = name;
-        this->age = age;
-        this->weight = weight;
-        this->roll_no=roll_no;
-        this->fees=fees;
-    }
+    string name;
     
-    void display(){
-        cout<<name<<" age is "<<age<<" weight is "<<weight<<" roll Number "<<roll_no<<" weight is "<<weight<<"fees is"<<fees<<endl;
-        
-    }
+    private:
+    int age;
     
-};
-class Teacher: public Human
-{
-    int salary, id;
+    protected:
+    int weight;
+    
+    void func(){
+        name = "Maya";
+        age = 15;
+        weight = 20;
+    }
 };
 
 int main()
 {
-   Student A("Sakshi", 15, 39, 2, 500);
-   A.display();
-   
+   Human S;
+   S.name = "Sakshi";
+   cout<<S.name<<endl;
+//   S.age = 10;
+    // S.weight=8;    
    
 }
