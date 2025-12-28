@@ -15,7 +15,7 @@ class Human{
     void func(){
         name = "Maya";
         age = 15;
-        weight = 20;
+        weight = 20; 
     }
 };
 
